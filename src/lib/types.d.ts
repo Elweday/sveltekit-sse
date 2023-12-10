@@ -3,6 +3,7 @@ enum EventType {
 }
 type ServerSentEvent = {
     type: EventType;
+    target: User;
     data: any;
 };  
 
