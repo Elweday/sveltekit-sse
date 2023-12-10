@@ -13,7 +13,8 @@ export async function POST({ request }) {
     user.friends.array.forEach((friend : User) => {
         evtStore.send({
             type: "newActiveUserEvent",
-            data: JSON.stringify(user)
+            data: JSON.stringify(user),
+            target: friend.id
         });
         
     });
